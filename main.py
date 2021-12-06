@@ -27,7 +27,7 @@ Y = pd.DataFrame(boston.target, columns=["MEDV"])
 st.sidebar.header('Specify Input Parameters')
 
 def user_input_features():
-    CRIM = st.sidebar.slider('CRIM', float(X.CRIM.min()), float(X.CRIM.max()), float(X.CRIM.mean()))
+    CRIM = st.sidebar.slider('per capita crime rate by town', float(X.CRIM.min()), float(X.CRIM.max()), float(X.CRIM.mean()))
     ZN = st.sidebar.slider('ZN', float(X.ZN.min()), float(X.ZN.max()), float(X.ZN.mean()))
     INDUS = st.sidebar.slider('INDUS', float(X.INDUS.min()), float(X.INDUS.max()), float(X.INDUS.mean()))
     CHAS = st.sidebar.slider('CHAS', float(X.CHAS.min()), float(X.CHAS.max()), float(X.CHAS.mean()))
@@ -40,7 +40,7 @@ def user_input_features():
     PTRATIO = st.sidebar.slider('PTRATIO', float(X.PTRATIO.min()), float(X.PTRATIO.max()), float(X.PTRATIO.mean()))
     B = st.sidebar.slider('B', float(X.B.min()), float(X.B.max()), float(X.B.mean()))
     LSTAT = st.sidebar.slider('LSTAT', float(X.LSTAT.min()), float(X.LSTAT.max()), float(X.LSTAT.mean()))
-    data = {'per capita crime rate by town': CRIM,
+    data = {'CRIM': CRIM,
             'ZN': ZN,
             'INDUS': INDUS,
             'CHAS': CHAS,
