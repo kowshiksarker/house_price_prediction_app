@@ -87,7 +87,7 @@ model.fit(x_train,y_train)
 y_pred =model.predict(x_test)
 
 y_pred_df=pd.DataFrame(model.predict(df))
-y_pred_df.rename(columns = {0:'Median value of owner-occupied homes in $1000s'}, inplace = True)
+y_pred_df.rename(columns = {0:'Predicted Median value of owner-occupied homes in $1000s'}, inplace = True)
 
 st.header('Prediction of MEDV')
 st.write(y_pred_df)
